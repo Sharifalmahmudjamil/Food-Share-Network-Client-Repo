@@ -12,6 +12,7 @@ import Login from './Pages/Login/Login';
 import AuthProviders from './Providers/AuthProviders';
 import Register from './Pages/Register/Register';
 import AddFood from './Pages/AddFood/AddFood';
+import AvailableFood from './Pages/AvilableFood/AvailableFood';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,11 @@ const router = createBrowserRouter([
       {
         path:'addFood',
         element:<AddFood></AddFood>
+      },
+      {
+        path:'availableFood',
+        element:<AvailableFood></AvailableFood>,
+        loader:()=>fetch('http://localhost:5000/availableFood/sort')
       }
     ]
   },

@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Banner from "../Banner/Banner";
 import Navbar from "../Shared/Navber/Navbar";
 import { useState } from "react";
@@ -35,7 +35,9 @@ const Home = () => {
                  }
             </div>
            <div className="text-center mt-4">
+           <Link to='/availableFood'>
            <button className="btn btn-outline btn-warning">Show All</button>
+           </Link>
            </div>
         </div>
     );

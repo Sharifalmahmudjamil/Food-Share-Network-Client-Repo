@@ -21,7 +21,7 @@ const Navbar = () => {
   <li className="lg:text-black "><NavLink to="/"
   className={({isActive})=>isActive ? 'btn btn-outline btn-sm': ' btn btn-ghost btn-sm'}
   >Home</NavLink></li>
-  <li className="lg:text-black"><NavLink to="/availableFoods"
+  <li className="lg:text-black"><NavLink to="/availableFood"
   className={({isActive})=>isActive ? 'btn btn-outline btn-sm': ' btn btn-ghost btn-sm'}
   
   >Available Foods</NavLink></li>
