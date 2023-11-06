@@ -1,8 +1,10 @@
 /* eslint-disable react/prop-types */
 
+import { Link } from "react-router-dom";
+
 
 const AvailableFoodCard = ({allFood}) => {
-    const {name,photo,dName,image,quantity,location,date,notes}= allFood;
+    const {name,photo,dName,image,quantity,location,date,notes,_id}= allFood;
     return (
         <div>
                    <div className="mt-10">
@@ -23,7 +25,9 @@ const AvailableFoodCard = ({allFood}) => {
   <h1 className="text-lg font-medium">  <span className="text-xl text-yellow-400">Expired Date</span> : {date}</h1>
   <h1 className="text-lg font-medium">  <span className="text-xl text-yellow-400">Additional Notes</span> : {notes}</h1>
     <div className="card-actions ">
+      <Link to={`/viewDetails/${_id}`}>
       <button className="btn bg-yellow-400"> View Detail</button>
+      </Link>
     </div>
   </div>
 </div>
