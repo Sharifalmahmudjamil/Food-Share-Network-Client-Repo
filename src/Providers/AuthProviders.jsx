@@ -12,7 +12,7 @@ export const AuthContext= createContext(null);
 
 const AuthProviders = ({children}) => {
 
-    const[user,setUser]=useState(null);
+    const[user,setUser]=useState();
     const [loading,setLoading]=useState(true);
 
     const googleSignIn=()=>{

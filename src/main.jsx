@@ -11,6 +11,7 @@ import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import AuthProviders from './Providers/AuthProviders';
 import Register from './Pages/Register/Register';
+import AddFood from './Pages/AddFood/AddFood';
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,8 @@ const router = createBrowserRouter([
     children:[
       {
         path:'/',
-        element:<Home></Home>
+        element:<Home></Home>,
+        loader:()=>fetch('http://localhost:5000/addFood/sort')
       },
       {
         path:'login',
@@ -28,6 +30,10 @@ const router = createBrowserRouter([
       {
         path:'register',
         element:<Register></Register>
+      },
+      {
+        path:'addFood',
+        element:<AddFood></AddFood>
       }
     ]
   },
