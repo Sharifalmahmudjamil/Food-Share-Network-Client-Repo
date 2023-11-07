@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProviders";
+// import Swal from "sweetalert2";
+import { ToastContainer, toast } from "react-toastify";
 
 
 const SingleFoodDetails = () => {
@@ -27,10 +29,34 @@ const SingleFoodDetails = () => {
 
         const singleFood={name,dName,dEmail,location,date,notes,photo,fId,user,req,money}
         console.log(singleFood);
+
+        // send to the server side
+        fetch('http://localhost:5000/requestFood',{
+            method:'POST',
+            headers:{
+                'content-type': 'application/json'
+            },
+            body:JSON.stringify(singleFood)
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data);
+            if(data.insertedId){
+                toast('Request SuccessFully')
+                // Swal.fire({
+                //     title: 'Success!',
+                //     text: 'Food Added SuccessFully',
+                //     icon: 'success',
+                //     confirmButtonText: 'Closed'
+                //   })
+            }
+        })
     }
 
     return (
         <div>
+           
+            
             <div>
                 <h1 className="text-5xl text-center">Donor Information</h1>
             </div>
@@ -222,6 +248,7 @@ const SingleFoodDetails = () => {
   </div>
 </div>
         </div>
+        <ToastContainer></ToastContainer>
 
         </div>
     );

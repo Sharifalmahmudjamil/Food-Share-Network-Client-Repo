@@ -28,7 +28,9 @@ const Navbar = () => {
   <li className="lg:text-black"><NavLink to="/addFood"
   className={({isActive})=>isActive ? 'btn btn-outline btn-sm': ' btn btn-ghost btn-sm'}
   >Add Food</NavLink></li>
-  <li className="lg:text-black"><NavLink to="/gallery">Manage My Foods</NavLink></li>
+  <li className="lg:text-black"><NavLink to="/manageFood"
+  className={({isActive})=>isActive ? 'btn btn-outline btn-sm': ' btn btn-ghost btn-sm'}
+  >Manage My Foods</NavLink></li>
   <li className="lg:text-black"><NavLink to="/blog"> My Food Request</NavLink></li>
    
   </>
