@@ -1,6 +1,7 @@
 import { useContext } from "react";
-import { Link, useLoaderData } from "react-router-dom";
+import {  useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProviders";
+import Swal from "sweetalert2";
 
 
 
@@ -14,6 +15,42 @@ const Manage = () => {
     const {user} = useContext(AuthContext)
     // console.log(manage);
     const manages = manage.filter(element => element.dEmail == user?.email)
+
+    const handleDelivered=id=>{
+        
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You want deliverd this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+          }).then((result) => {
+            if (result.isConfirmed) {
+           
+              fetch(`http://localhost:5000/requestFood/${id}`,{
+                method: 'PATCH',
+                headers:{
+                    'content-type':'application/json'
+                },
+                body:JSON.stringify({status:'confirm'})
+              })
+              .then(res=>res.json())
+              .then(data=>{
+                console.log(data);
+                if(data.modifiedCount >0){
+                     Swal.fire(
+                'Deleted!',
+                'Your coffee has been deleted.',
+                'success'
+              )
+           
+                }
+              })
+            }
+          })
+    }
     return (
         <div>
             <h1>manage{manage.length}</h1>
@@ -67,9 +104,9 @@ const Manage = () => {
             
             <th>
             <td>
-                <Link >
-                <button className="btn btn-warning btn-sm">Update</button>
-                </Link>
+               
+                <button onClick={()=>handleDelivered(manage._id)} className="btn btn-warning btn-sm"> Delivered</button>
+                
                 </td>
             
             </th>

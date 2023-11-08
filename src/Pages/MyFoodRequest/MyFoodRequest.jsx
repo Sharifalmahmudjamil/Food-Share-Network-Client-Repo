@@ -4,6 +4,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProviders";
 import Footer from "../Shared/Footer/Footer";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 
 const MyFoodRequest = () => {
@@ -11,6 +12,7 @@ const MyFoodRequest = () => {
     const foodReq= useLoaderData();
     console.log(foodReq);
     const {user} = useContext(AuthContext)
+    // eslint-disable-next-line no-unused-vars
     const [req,setReq]= useState([]);
     const foods = foodReq.filter(element => element.dEmail == user?.email)
 
@@ -50,6 +52,9 @@ const MyFoodRequest = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>FoodShare Network || Food Request</title>
+            </Helmet>
             <Navbar></Navbar>
             <div className="overflow-x-auto">
   <table className="table  ">

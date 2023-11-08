@@ -56,7 +56,7 @@ const Register = () => {
               
              
 
-              .catch(error=> toast.error(error.message))
+              .catch(error=> (error.message))
              
               toast("Create Account Successfully , Please Login");
               

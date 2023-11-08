@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProviders";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -51,6 +52,9 @@ const AddFood = () => {
     }
     return (
         <div>
+              <Helmet>
+                <title>FoodShare Network || Add Food</title>
+            </Helmet>
             <div className=" p-24 bg-yellow-300">
            <Link to="/">
            <button className="btn lg:btn-outline mb-5">Back To Home</button>

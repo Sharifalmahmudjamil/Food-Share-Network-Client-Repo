@@ -68,7 +68,7 @@ displayName : name , photoURL : photo
           return ()=>{
               unsubscribe();
           }
-      },[])
+      },[user?.email])
 
     const userInfo={
         user,

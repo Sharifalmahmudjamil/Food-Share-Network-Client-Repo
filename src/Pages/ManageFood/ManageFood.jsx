@@ -4,6 +4,7 @@ import Swal from "sweetalert2";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProviders";
 import Footer from "../Shared/Footer/Footer";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -63,6 +64,9 @@ const ManageFood = () => {
  
     return (
         <div>
+            <Helmet>
+                <title>FoodShare Network || Manage My Food</title>
+            </Helmet>
             <Navbar></Navbar>
           
         

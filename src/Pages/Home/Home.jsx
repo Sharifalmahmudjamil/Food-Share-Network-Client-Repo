@@ -6,6 +6,7 @@ import FeaturedFood from "../FeaturedFood/FeaturedFood";
 import Footer from "../Shared/Footer/Footer";
 import AboutUs from "../AboutUs/AboutUs";
 import Gallery from "../Gallery/Gallery";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -20,6 +21,9 @@ const Home = () => {
     const [data,setData]=useState(foods.slice(0,6))
     return (
         <div>
+            <Helmet>
+                <title>FoodShare Network || Home</title>
+            </Helmet>
             <Navbar></Navbar>
             <Banner></Banner>
             <div className="text-5xl text-center mt-6">

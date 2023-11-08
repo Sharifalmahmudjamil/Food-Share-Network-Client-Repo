@@ -3,6 +3,7 @@ import AvailableFoodCard from "./AvailableFoodCard";
 import { useState } from "react";
 import Navbar from "../Shared/Navber/Navbar";
 import Footer from "../Shared/Footer/Footer";
+import { Helmet } from "react-helmet-async";
 
 
 const AvailableFood = () => {
@@ -12,6 +13,9 @@ const AvailableFood = () => {
     console.log(allFoods);
     return (
         <div >
+              <Helmet>
+                <title>FoodShare Network || Available Foods</title>
+            </Helmet>
             <Navbar></Navbar>
             <h1 className="text-5xl text-center mt-5">Available Foods</h1>
             <div className="lg:ml-96 mt-5">
