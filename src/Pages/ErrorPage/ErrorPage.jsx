@@ -1,9 +1,13 @@
+import { Link } from "react-router-dom";
 
 
 const ErrorPage = () => {
     return (
-        <div>
-             <img src="https://i.ibb.co/ySprGXg/13315300-5203299.jpg" alt="" />
+        <div className="w-[800px] h-[800px] mx-auto ">
+            <Link to="/">
+           <button className="btn lg:btn-outline mt-5">Back To Home</button>
+           </Link>
+             <img  src="https://i.ibb.co/zPCXNcz/11435044-4705517.jpg" alt="" />
         </div>
     );
 };
