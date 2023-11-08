@@ -5,6 +5,7 @@ import { useState } from "react";
 import FeaturedFood from "../FeaturedFood/FeaturedFood";
 import Footer from "../Shared/Footer/Footer";
 import AboutUs from "../AboutUs/AboutUs";
+import Gallery from "../Gallery/Gallery";
 
 
 
@@ -42,6 +43,7 @@ const Home = () => {
            </Link>
            </div>
            <AboutUs></AboutUs>
+           <Gallery></Gallery>
            <Footer></Footer>
         </div>
         

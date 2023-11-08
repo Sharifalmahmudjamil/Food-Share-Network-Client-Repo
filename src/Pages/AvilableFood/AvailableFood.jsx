@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import AvailableFoodCard from "./AvailableFoodCard";
 import { useState } from "react";
 import Navbar from "../Shared/Navber/Navbar";
+import Footer from "../Shared/Footer/Footer";
 
 
 const AvailableFood = () => {
@@ -30,6 +31,7 @@ const AvailableFood = () => {
                      </AvailableFoodCard>)
             }
         </div>
+        <Footer></Footer>
         </div>
     );
 };

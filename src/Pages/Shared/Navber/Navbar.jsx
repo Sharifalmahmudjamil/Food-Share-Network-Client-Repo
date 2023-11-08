@@ -38,7 +38,7 @@ const Navbar = () => {
   className={({isActive})=>isActive ? 'btn btn-outline btn-sm': ' btn btn-ghost btn-sm'}
 
   >Manage My Foods</NavLink></li>
-  <li className="lg:text-black"><NavLink to="/foodReq"> My Food Request</NavLink></li>
+  <li className="lg:text-black"><NavLink to="/foodReq" className={({isActive})=>isActive ? 'btn btn-outline btn-sm': ' btn btn-ghost btn-sm'}> My Food Request</NavLink></li>
    
   </>
 

@@ -8,6 +8,7 @@ import swal from "sweetalert";
 
 
 
+
 const Login = () => {
   const {signIn,googleSignIn}= useContext(AuthContext)
   const location=useLocation();
@@ -39,10 +40,21 @@ const Login = () => {
          signIn(email,password)
          .then(result=>{
            console.log(result.user);
+           
+          
            e.target.reset();
            
- 
            navigate(location?.state? location.state : '/')
+           
+
+          // //  get access token
+          // axios.post('http://localhost:5000/jwt',user,{withCredentials:true} )
+          // .then(res=>{
+          //   console.log(res.data);
+           
+          // })
+
+
  
          })
          .catch(error=>{

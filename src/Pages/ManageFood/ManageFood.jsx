@@ -3,6 +3,7 @@ import Navbar from "../Shared/Navber/Navbar";
 import Swal from "sweetalert2";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProviders";
+import Footer from "../Shared/Footer/Footer";
 
 
 
@@ -163,7 +164,7 @@ const ManageFood = () => {
 </div>
 
        
-        
+        <Footer></Footer>
         
         </div>
     );

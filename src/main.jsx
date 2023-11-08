@@ -20,6 +20,7 @@ import UpdateRoute from './Pages/UpdateRoute/UpdateRoute';
 import PrivateRoute from './Route/PrivateRoute';
 import Manage from './Pages/Manage/Manage';
 import ErrorPage from './Pages/ErrorPage/ErrorPage';
+import MyFoodRequest from './Pages/MyFoodRequest/MyFoodRequest';
 
 
 const router = createBrowserRouter([
@@ -75,6 +76,11 @@ const router = createBrowserRouter([
         element:<Manage></Manage>,
         loader:({params})=>fetch(`http://localhost:5000/requestFood/${params.id}`)
       },
+      {
+        path:'foodReq',
+        element:<MyFoodRequest></MyFoodRequest>,
+        loader:()=>fetch('http://localhost:5000/requestFood')
+      }
      
       
     ]
