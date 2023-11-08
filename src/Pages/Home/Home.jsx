@@ -3,6 +3,8 @@ import Banner from "../Banner/Banner";
 import Navbar from "../Shared/Navber/Navbar";
 import { useState } from "react";
 import FeaturedFood from "../FeaturedFood/FeaturedFood";
+import Footer from "../Shared/Footer/Footer";
+import AboutUs from "../AboutUs/AboutUs";
 
 
 
@@ -39,7 +41,10 @@ const Home = () => {
            <button className="btn btn-outline btn-warning">Show All</button>
            </Link>
            </div>
+           <AboutUs></AboutUs>
+           <Footer></Footer>
         </div>
+        
     );
 };
 

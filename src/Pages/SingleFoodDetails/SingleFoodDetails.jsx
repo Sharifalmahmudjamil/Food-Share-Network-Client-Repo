@@ -25,9 +25,10 @@ const SingleFoodDetails = () => {
         const fId=form.id.value;
         const user= form.uEmail.value;
         const req = form.rDate.value;
+        const time = form.time.value;
         const money= form.money.value;
 
-        const singleFood={name,dName,dEmail,location,date,notes,photo,fId,user,req,money}
+        const singleFood={name,dName,dEmail,location,date,notes,photo,fId,user,req,time,money}
         console.log(singleFood);
 
         // send to the server side
@@ -185,6 +186,15 @@ const SingleFoodDetails = () => {
                     <label className="input-group">
                         
                         <input type="email" name="uEmail"defaultValue={user.email} placeholder="Enter the User Email" className="input input-bordered w-full" />
+                    </label>
+                    </div>
+                <div className="form-control md:w-1/2 ml-4">
+                    <label className="label">
+                        <span className="label-text">Request Time</span>
+                    </label>
+                    <label className="input-group">
+                        
+                        <input type="time" name="time" placeholder="Enter the User Email" className="input input-bordered w-full" />
                     </label>
                     </div>
                 <div className="form-control md:w-1/2 ml-4">

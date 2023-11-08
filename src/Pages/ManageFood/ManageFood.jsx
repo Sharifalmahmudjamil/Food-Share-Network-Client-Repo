@@ -85,7 +85,7 @@ const ManageFood = () => {
         <th>Expire Date</th>
         <th>Action</th>
         <th>Action</th>
-        <th></th>
+        
       </tr>
     </thead>
     <tbody>
@@ -141,6 +141,11 @@ const ManageFood = () => {
             <td>
                 <Link to={`/update/${food._id}`}>
                 <button className="btn btn-warning btn-sm">Update</button>
+                </Link>
+                </td>
+            <td>
+                <Link to={`/manage/${food._id}`}>
+                <button className="btn btn-warning btn-sm">Manage</button>
                 </Link>
                 </td>
             </th>
