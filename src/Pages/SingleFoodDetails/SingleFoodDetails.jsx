@@ -10,7 +10,7 @@ const SingleFoodDetails = () => {
     const food= useLoaderData();
     const {user}=useContext(AuthContext);
     console.log(user);
-    const {name,photo,dName,quantity,location,date,notes,_id}= food;
+    const {name,photo,dName,quantity,location,date,notes,_id,email}= food;
 
     const handleRequestAdd = e =>{
         e.preventDefault();
@@ -125,7 +125,7 @@ const SingleFoodDetails = () => {
                     </label>
                     <label className="input-group">
                         
-                        <input type="text" name="name" defaultValue={name} placeholder="Enter  the food Name" className="input input-bordered w-full" />
+                        <input type="text" readOnly name="name" defaultValue={name} placeholder="Enter  the food Name" className="input input-bordered w-full" />
                     </label>
                     </div>
                 <div className="form-control md:w-1/2 ml-4">
@@ -134,7 +134,7 @@ const SingleFoodDetails = () => {
                     </label>
                     <label className="input-group">
                         
-                        <input type="email" name="email" placeholder="Enter the email" className="input input-bordered w-full" />
+                        <input type="email" readOnly defaultValue={email} name="email" placeholder="Enter the email" className="input input-bordered w-full" />
                     </label>
                     </div>
                 <div className="form-control md:w-1/2 ml-4">
@@ -143,7 +143,7 @@ const SingleFoodDetails = () => {
                     </label>
                     <label className="input-group">
                         
-                        <input type="text" name="dName"  placeholder="Enter the Food Donator Name" className="input input-bordered w-full" />
+                        <input type="text" readOnly defaultValue={dName} name="dName"  placeholder="Enter the Food Donator Name" className="input input-bordered w-full" />
                     </label>
                     </div>
                 </div>
@@ -155,7 +155,7 @@ const SingleFoodDetails = () => {
                     </label>
                     <label className="input-group">
                         
-                        <input type="text" name="location" defaultValue={location} placeholder="Enter the  Pickup Location" className="input input-bordered w-full" />
+                        <input type="text" readOnly name="location" defaultValue={location} placeholder="Enter the  Pickup Location" className="input input-bordered w-full" />
                     </label>
                     </div>
                 <div className="form-control md:w-1/2 ml-4">
@@ -164,7 +164,7 @@ const SingleFoodDetails = () => {
                     </label>
                     <label className="input-group">
                         
-                        <input type="date" name="date" defaultValue={date} placeholder="Enter the  Expired Date" className="input input-bordered w-full" />
+                        <input type="date" readOnly name="date" defaultValue={date} placeholder="Enter the  Expired Date" className="input input-bordered w-full" />
                     </label>
                     </div>
                 <div className="form-control md:w-1/2 ml-4">
@@ -173,7 +173,7 @@ const SingleFoodDetails = () => {
                     </label>
                     <label className="input-group">
                         
-                        <input type="text" name="id" defaultValue={_id} placeholder="Enter the Food Id" className="input input-bordered w-full" />
+                        <input type="text" name="id" readOnly defaultValue={_id} placeholder="Enter the Food Id" className="input input-bordered w-full" />
                     </label>
                     </div>
                 </div>
@@ -185,7 +185,7 @@ const SingleFoodDetails = () => {
                     </label>
                     <label className="input-group">
                         
-                        <input type="email" name="uEmail"defaultValue={user.email} placeholder="Enter the User Email" className="input input-bordered w-full" />
+                        <input type="email"readOnly name="uEmail"defaultValue={user.email} placeholder="Enter the User Email" className="input input-bordered w-full" />
                     </label>
                     </div>
                 <div className="form-control md:w-1/2 ml-4">
@@ -194,7 +194,7 @@ const SingleFoodDetails = () => {
                     </label>
                     <label className="input-group">
                         
-                        <input type="time" name="time" placeholder="Enter the User Email" className="input input-bordered w-full" />
+                        <input type="time"  name="time" placeholder="Enter the User Email" className="input input-bordered w-full" />
                     </label>
                     </div>
                 <div className="form-control md:w-1/2 ml-4">
@@ -203,7 +203,7 @@ const SingleFoodDetails = () => {
                     </label>
                     <label className="input-group">
                         
-                        <input type="text" name="notes"defaultValue={notes} placeholder="Enter the Additional Notes" className="input input-bordered w-full" />
+                        <input type="text" readOnly name="notes"defaultValue={notes} placeholder="Enter the Additional Notes" className="input input-bordered w-full" />
                         
                     </label>
                     </div>
@@ -216,7 +216,7 @@ const SingleFoodDetails = () => {
                     </label>
                     <label className="input-group">
                         
-                        <input type="text" name="photo"defaultValue={photo} placeholder="Enter photo URL" className="input input-bordered w-full" />
+                        <input type="text" readOnly name="photo"defaultValue={photo} placeholder="Enter photo URL" className="input input-bordered w-full" />
                     </label>
                     </div>
                 <div className="form-control  md:w-1/2 ml-4">
@@ -225,7 +225,7 @@ const SingleFoodDetails = () => {
                     </label>
                     <label className="input-group">
                         
-                        <input type="date" name="rDate" placeholder="Enter the Date" className="input input-bordered w-full" />
+                        <input type="date"  name="rDate" placeholder="Enter the Date" className="input input-bordered w-full" />
                     </label>
                     </div>
                 <div className="form-control  md:w-1/2 ml-4">

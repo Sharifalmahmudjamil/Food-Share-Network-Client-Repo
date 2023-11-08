@@ -1,16 +1,53 @@
 import { Link, useLoaderData } from "react-router-dom";
 import Navbar from "../Shared/Navber/Navbar";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProviders";
 import Footer from "../Shared/Footer/Footer";
+import Swal from "sweetalert2";
 
 
 const MyFoodRequest = () => {
+
     const foodReq= useLoaderData();
     console.log(foodReq);
     const {user} = useContext(AuthContext)
-
+    const [req,setReq]= useState([]);
     const foods = foodReq.filter(element => element.dEmail == user?.email)
+
+
+    const handleCancelReq=id =>{
+      Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to cancel this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, cancel Request it!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+       
+          fetch(`http://localhost:5000/requestFood/${id}`,{
+            method: 'DELETE'
+          })
+          .then(res=>res.json())
+          .then(data=>{
+            console.log(data);
+            if(data.deletedCount >0){
+                 Swal.fire(
+            'Cancel Request!',
+            'Cancel Request Successfully',
+            'success'
+          )
+        //   remove the user from ui
+                 const remaining=foods.filter(food=>food._id !== id);
+                 setReq(remaining);
+            }
+          })
+        }
+      })
+    }
+
     return (
         <div>
             <Navbar></Navbar>
@@ -72,7 +109,7 @@ const MyFoodRequest = () => {
             <th>
             <td>
                 <Link>
-                <button className="btn btn-warning btn-sm"> Cancel Request</button>
+                <button onClick={()=>handleCancelReq(food._id)} className="btn btn-warning btn-sm"> Cancel Request</button>
                 </Link>
                 </td>
            
