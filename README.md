@@ -1,8 +1,15 @@
-# React + Vite
+# Question: Add at least five bullet points mentioning different features and functionalities of your website.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ANS: This Assignment is Food Share Network Website.and I have add five features and functionalities of My website.
 
-Currently, two official plugins are available:
+ 1. Registration and Login Page: Allow registered users to create and manage their login page and access a personalized Food Share network  Website.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ 2.  Manage My Foods: When user login then user watching Our Manage Food section and Update and Delete.
+
+ 3. JWt Token: In my website I am using Jwt token in the server site and backend Site.
+
+ 4. CRUD Operation: Food Share website i am using CRUD operation and all data send to mongodb.
+
+ 5. Private Route: In Food Share Network website i have using Private Route.when  user login then user can see the all section.otherwise user see some section.
+
+ 6. Firebase Authentication: In this website using firebase Authentication.
