@@ -9,6 +9,7 @@ const ErrorPage = () => {
            </Link>
              <img  src="https://i.ibb.co/zPCXNcz/11435044-4705517.jpg" alt="" />
         </div>
+       
     );
 };
 

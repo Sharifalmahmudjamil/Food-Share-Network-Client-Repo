@@ -3,7 +3,7 @@ import {  useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProviders";
 import Navbar from "../Shared/Navber/Navbar";
 import Footer from "../Shared/Footer/Footer";
-// import Swal from "sweetalert2";
+
 
 
 
@@ -18,41 +18,7 @@ const Manage = () => {
     // console.log(manage);
     const manages = manage.filter(element => element.dEmail == user?.email)
 
-    // const handleDelivered=id=>{
-        
-    //     Swal.fire({
-    //         title: 'Are you sure?',
-    //         text: "You want deliverd this!",
-    //         icon: 'warning',
-    //         showCancelButton: true,
-    //         confirmButtonColor: '#3085d6',
-    //         cancelButtonColor: '#d33',
-    //         confirmButtonText: 'Yes, delete it!'
-    //       }).then((result) => {
-    //         if (result.isConfirmed) {
-           
-    //           fetch(`https://food-share-network-serversite.vercel.app/requestFood/${id}`,{
-    //             method: 'PATCH',
-    //             headers:{
-    //                 'content-type':'application/json'
-    //             },
-    //             body:JSON.stringify({status:'confirm'})
-    //           })
-    //           .then(res=>res.json())
-    //           .then(data=>{
-    //             console.log(data);
-    //             if(data.modifiedCount >0){
-    //                  Swal.fire(
-    //             'Deleted!',
-    //             'Your coffee has been deleted.',
-    //             'success'
-    //           )
-           
-    //             }
-    //           })
-    //         }
-    //       })
-    // }
+    
     return (
         <div>
             <Navbar></Navbar>
