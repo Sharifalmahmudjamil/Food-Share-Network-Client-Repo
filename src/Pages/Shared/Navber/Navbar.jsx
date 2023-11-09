@@ -21,10 +21,32 @@ const Navbar = () => {
   <li className="lg:text-black "><NavLink to="/"
   className={({isActive})=>isActive ? 'btn btn-outline btn-sm': ' btn btn-ghost btn-sm'}
   >Home</NavLink></li>
+
   <li className="lg:text-black"><NavLink to="/availableFood"
   className={({isActive})=>isActive ? 'btn btn-outline btn-sm': ' btn btn-ghost btn-sm'}
   
   >Available Foods</NavLink></li>
+
+ 
+    {/* <li className="lg:text-black"><NavLink to="/addFood"
+    className={({isActive})=>isActive ? 'btn btn-outline btn-sm': ' btn btn-ghost btn-sm'}>Add Food</NavLink></li>
+   
+      
+  
+ 
+
+  <li className="lg:text-black"><NavLink to="/manageFood"
+  className={({isActive})=>isActive ? 'btn btn-outline btn-sm': ' btn btn-ghost btn-sm'}
+
+  >Manage My Foods</NavLink></li>
+  <li className="lg:text-black"><NavLink to="/foodReq" className={({isActive})=>isActive ? 'btn btn-outline btn-sm': ' btn btn-ghost btn-sm'}> My Food Request</NavLink></li> */}
+
+  {
+    user?.email?<>
+    {/* <li className="lg:text-black"><NavLink to="/availableFood"
+  className={({isActive})=>isActive ? 'btn btn-outline btn-sm': ' btn btn-ghost btn-sm'}
+  
+  >Available Foods</NavLink></li> */}
 
  
     <li className="lg:text-black"><NavLink to="/addFood"
@@ -39,6 +61,13 @@ const Navbar = () => {
 
   >Manage My Foods</NavLink></li>
   <li className="lg:text-black"><NavLink to="/foodReq" className={({isActive})=>isActive ? 'btn btn-outline btn-sm': ' btn btn-ghost btn-sm'}> My Food Request</NavLink></li>
+  {/* <button onClick={handleSignOut} className=" lg:btn lg:btn-neutral hidden btn-sm bg-rose-600 text-white">SignOut</button> */}
+  </> :
+   <Link to="/register">
+   <button className="btn btn-sm bg-orange-500 text-white">Register</button>
+   </Link> 
+
+  }
    
   </>
 
@@ -77,11 +106,12 @@ const Navbar = () => {
 
   </ul>
 </div>
-              <button onClick={handleSignOut} className=" lg:btn lg:btn-neutral btn-sm bg-rose-600 text-white">SignOut</button>
+
+              <button onClick={handleSignOut} className=" lg:btn  lg:btn-neutral btn-sm  bg-rose-600 text-white">SignOut</button>
               </>
               :
               <Link to="/login">
-              <button className="btn btn-sm bg-yellow-500 text-white">Login</button>
+              <button className="btn btn-sm  bg-yellow-500 text-white">Login</button>
               </Link>
             }
         </ul>
@@ -113,11 +143,11 @@ const Navbar = () => {
 
   </ul>
 </div>
-              <button onClick={handleSignOut} className=" lg:btn lg:btn-neutral btn-sm bg-rose-600 text-white">SignOut</button>
+              <button onClick={handleSignOut} className=" lg:btn   lg:btn-neutral btn-sm bg-rose-600 text-white">SignOut</button>
               </>
               :
               <Link to="/login">
-              <button className="btn btn-sm bg-yellow-500 text-white">Login</button>
+              <button className="btn btn-sm  bg-yellow-500 text-white">Login</button>
               </Link>
             }
     </ul>
