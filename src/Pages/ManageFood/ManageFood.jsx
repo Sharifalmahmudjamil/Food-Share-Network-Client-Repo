@@ -35,7 +35,7 @@ const ManageFood = () => {
           }).then((result) => {
             if (result.isConfirmed) {
            
-              fetch(`http://localhost:5000/addFood/${_id}`,{
+              fetch(`https://food-share-network-serversite.vercel.app/addFood/${_id}`,{
                 method: 'DELETE'
               })
               .then(res=>res.json())

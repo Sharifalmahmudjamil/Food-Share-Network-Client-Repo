@@ -31,7 +31,7 @@ const Manage = () => {
     //       }).then((result) => {
     //         if (result.isConfirmed) {
            
-    //           fetch(`http://localhost:5000/requestFood/${id}`,{
+    //           fetch(`https://food-share-network-serversite.vercel.app/requestFood/${id}`,{
     //             method: 'PATCH',
     //             headers:{
     //                 'content-type':'application/json'

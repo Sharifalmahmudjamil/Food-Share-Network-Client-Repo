@@ -28,7 +28,7 @@ const UpdateRoute = () => {
         console.log(updateFood);
         
         // send data to the server site
-        fetch(`http://localhost:5000/addFood/${_id}`,{
+        fetch(`https://food-share-network-serversite.vercel.app/addFood/${_id}`,{
             method:'PUT',
             headers:{
                 'content-type': 'application/json'

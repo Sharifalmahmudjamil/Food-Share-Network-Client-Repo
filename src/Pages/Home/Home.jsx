@@ -21,6 +21,7 @@ const Home = () => {
     const [data,setData]=useState(foods.slice(0,6))
     return (
         <div>
+        
             <Helmet>
                 <title>FoodShare Network || Home</title>
             </Helmet>

@@ -61,7 +61,7 @@ const Navbar = () => {
 
   >Manage My Foods</NavLink></li>
   <li className="lg:text-black"><NavLink to="/foodReq" className={({isActive})=>isActive ? 'btn btn-outline btn-sm': ' btn btn-ghost btn-sm'}> My Food Request</NavLink></li>
-  {/* <button onClick={handleSignOut} className=" lg:btn lg:btn-neutral hidden btn-sm bg-rose-600 text-white">SignOut</button> */}
+  
   </> :
    <Link to="/register">
    <button className="btn btn-sm bg-orange-500 text-white">Register</button>

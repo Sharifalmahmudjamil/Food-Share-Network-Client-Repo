@@ -29,7 +29,7 @@ const AddFood = () => {
         console.log(newFood);
         
         // send data to the server site
-        fetch('http://localhost:5000/addFood',{
+        fetch('https://food-share-network-serversite.vercel.app/addFood',{
             method:'POST',
             headers:{
                 'content-type': 'application/json'

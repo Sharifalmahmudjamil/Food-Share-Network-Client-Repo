@@ -32,7 +32,7 @@ const SingleFoodDetails = () => {
         console.log(singleFood);
 
         // send to the server side
-        fetch('http://localhost:5000/requestFood',{
+        fetch('https://food-share-network-serversite.vercel.app/requestFood',{
             method:'POST',
             headers:{
                 'content-type': 'application/json'

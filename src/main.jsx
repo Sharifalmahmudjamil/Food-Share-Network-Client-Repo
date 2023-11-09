@@ -33,7 +33,7 @@ const router = createBrowserRouter([
       {
         path:'/',
         element:<Home></Home>,
-        loader:()=>fetch('http://localhost:5000/addFood')
+        loader:()=>fetch('https://food-share-network-serversite.vercel.app/addFood')
       },
       {
         path:'login',
@@ -52,35 +52,35 @@ const router = createBrowserRouter([
       {
         path:'availableFood',
         element:<AvailableFood></AvailableFood>,
-        loader:()=>fetch('http://localhost:5000/availableFood/sort')
+        loader:()=>fetch('https://food-share-network-serversite.vercel.app/availableFood/sort')
       },
       {
         path: 'viewDetails/:id',
         element:<PrivateRoute><SingleFoodDetails></SingleFoodDetails></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/addFood/${params.id}`)
+        loader:({params})=>fetch(`https://food-share-network-serversite.vercel.app/addFood/${params.id}`)
       },
       {
         path:"manageFood",
         element:<PrivateRoute>
            <ManageFood></ManageFood>
            </PrivateRoute>,
-        loader:()=> fetch('http://localhost:5000/addFood')
+        loader:()=> fetch('https://food-share-network-serversite.vercel.app/addFood')
         
       },
       {
         path:'update/:id',
         element:<UpdateRoute></UpdateRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/addFood/${params.id}`)
+        loader:({params})=>fetch(`https://food-share-network-serversite.vercel.app/addFood/${params.id}`)
       },
       {
         path:'manage/:id',
         element:<Manage></Manage>,
-        loader:()=>fetch(`http://localhost:5000/requestFood`)
+        loader:()=>fetch(`https://food-share-network-serversite.vercel.app/requestFood`)
       },
       {
         path:'foodReq',
         element:<MyFoodRequest></MyFoodRequest>,
-        loader:()=>fetch('http://localhost:5000/requestFood')
+        loader:()=>fetch('https://food-share-network-serversite.vercel.app/requestFood')
       }
      
       
