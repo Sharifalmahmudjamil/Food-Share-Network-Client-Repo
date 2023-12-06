@@ -80,13 +80,7 @@ const SingleFoodDetails = () => {
         <td>{location}</td>
        
       </tr>
-      {/* row 2 */}
-      {/* <tr>
-        <th>2</th>
-        <td>Hart Hagerty</td>
-        <td>Desktop Support Technician</td>
-        
-      </tr> */}
+   
    
     
     </tbody>
